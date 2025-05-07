@@ -1,0 +1,27 @@
+.promo__content{
+    text-align: center;
+}
+
+.promo__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 83px;
+    color: #080305;
+}
+.promo__button{
+    background-color: #3D1EDD;
+    width: 145px;
+    height: 50px;
+    color: white;
+}
+.promo__content__text{
+    text-decoration: none;
+    color: #3D1EDD;
+
+}
+.promo__description{
+    color: #707070;
+}
