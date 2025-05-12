@@ -14,6 +14,7 @@ header {
     column-gap: 16px;
     padding-left: 0;
     margin-left: auto;
+    font-family: 'SemiBold';
 }
 .header__recruiters{
     padding: 14px 20px;
