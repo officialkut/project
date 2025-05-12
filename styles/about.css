@@ -1,3 +1,6 @@
+.section__about{
+    padding: 1px 120px;
+}
 .about__list {
     display: flex;
     justify-content: space-between;
