@@ -1,6 +1,7 @@
-.section__about{
+.section__about {
     padding: 1px 120px;
 }
+
 .about__list {
     display: flex;
     justify-content: space-between;
@@ -87,34 +88,48 @@
 .about__slogan {
     display: list-item;
 }
+
 .about__content {
     padding: 14px 16.5px;
     background-color: #3d1edd;
+    font-size: 12px;
 
-    border: 1px solid #3d1edd; 
+    border: 1px solid #3d1edd;
     color: #ffffff;
 }
+
 .about__content2 {
     padding: 14px 15px;
     background-color: initial;
-
-    border: 1px solid #e5defd; 
+    font-size: 12px;
+    border: 1px solid #e5defd;
 }
+
 .about__list__item {
     width: 213px;
-    background-color: white;
-    border: 1px solid #E5E8EB;
+    height: 250px;
+
     margin-left: 430px;
     margin-top: -278px;
 }
+
 .about__conteiners {
     display: flex;
     align-items: center;
     margin: 9px 0px;
 }
-.about__email{
+
+.about__email {
     margin: 1px 12px;
+    font-size: 12px;
 }
-.about__normol{
+
+.about__normol {
     margin: 1px;
+}
+
+.about__list2 {
+    padding: 1px 12px;
+    background-color: white;
+    border: 1px solid #E5E8EB;
 }
