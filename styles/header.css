@@ -14,7 +14,8 @@ header {
     column-gap: 16px;
     padding-left: 0;
     margin-left: auto;
-    font-family: 'SemiBold';
+    font-family: 'inter';
+    font-weight: 600;
 }
 .header__recruiters{
     padding: 14px 20px;
@@ -42,4 +43,5 @@ header {
     color: #000000;
     text-decoration: none;
     font-family: 'inter';
+    
 }

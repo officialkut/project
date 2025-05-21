@@ -10,20 +10,24 @@
     font-weight: 700;
     line-height: 83px;
     color: #080305;
+
 }
 .promo__button{
     background-color: #3D1EDD;
     width: 145px;
     height: 50px;
     color: white;
-    font-family: 'SemiBold';
+    font-family: 'inter';
+    font-weight: 600;
 }
 .promo__content__text{
     text-decoration: none;
     color: #3D1EDD;
-    font-family: 'Regular';
+    font-family: 'inter';
+    font-weight: 400;
 }
 .promo__description{
     color: #707070;
     font-family: 'inter';
+    font-weight: 700;
 }

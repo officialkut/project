@@ -7,12 +7,15 @@
     display: flex;
     justify-content: space-between;
     font-family: 'inter';
+    font-weight: 700;
 }
 .footer__logo {
     font-size: 24px;
     font-family: 'inter';
+    font-weight: 700;
 }
 .footer__title {
     color: #707070;
-    font-family: 'medium';
+    font-family: 'inter';
+    font-weight: 500;
 }

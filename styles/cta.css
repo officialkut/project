@@ -19,6 +19,7 @@
     color: #fff;
     font-size: 288%;
     font-family: 'inter';
+    font-weight: 700;
 }
 
 .CTA__button {
@@ -27,5 +28,6 @@
     cursor: pointer;
     border: 1px solid #3d1edd;
     color: #fff;
-    font-family: 'SemiBold';
+    font-family: 'inter';
+    font-weight: 600;
 }

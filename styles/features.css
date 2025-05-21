@@ -11,7 +11,9 @@
 }
 .features__title {
     font-family: 'inter';
+    font-weight: 700;
 }
 .features__subtitle {
-    font-family: 'Regular';
+    font-family: 'inter';
+    font-weight: 400;
 }
