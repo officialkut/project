@@ -1,8 +1,18 @@
+.section__caption {
+    margin-top: 100px;
+}
+
 .caption__title__laed {
     font-weight: 700;
     font-size: 40px;
     line-height: 120%;
-    text-align: center
+    text-align: center;
+    font-family: 'inter';
+}
+
+.caption__hard {
+    display: flex;
+    align-items: flex-end;
 }
 
 .caption__img {
@@ -13,6 +23,7 @@
 .caption__pic {
     display: block;
     margin: auto;
+    margin-left: 378px;
 }
 
 .caption__subtitle {
@@ -21,8 +32,14 @@
 
 .caption__subtitle__1 {
     margin: 3px;
+    font-family: 'inter';
 }
 
 .caption__subtitle__laed {
     margin: 3px;
+    font-family: 'Regular';
+}
+
+.caption__content__img {
+    margin-left: 245px;
 }

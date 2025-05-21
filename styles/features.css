@@ -9,3 +9,9 @@
 .features__wrap{
     margin: 120px;
 }
+.features__title {
+    font-family: 'inter';
+}
+.features__subtitle {
+    font-family: 'Regular';
+}

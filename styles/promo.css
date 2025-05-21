@@ -5,7 +5,7 @@
 .promo__title {
     margin-top: 0;
     margin-bottom: 16px;
-    
+    font-family: 'inter';
     font-size: 64px;
     font-weight: 700;
     line-height: 83px;
@@ -21,8 +21,9 @@
 .promo__content__text{
     text-decoration: none;
     color: #3D1EDD;
-
+    font-family: 'Regular';
 }
 .promo__description{
     color: #707070;
+    font-family: 'inter';
 }

@@ -12,7 +12,12 @@
 
 }
 @font-face {
-    font-family: SemiBold;
+    font-family: 'SemiBold';
     src: url('/fonts/Inter-SemiBold.woff2');
     font-weight: 600;
+}
+@font-face{
+    font-family: 'medium';
+    src: url('/fonts/Inter-Medium.woff2');
+    font-weight: 500;
 }
