@@ -1,99 +1,70 @@
-// Объект с данными карточек
+// Mock data for cards
 const cards = {
   card_1: {
-
-    profile: "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on briefclio to show your best self and get discovered by recruiter.",
-    bestPortfolio: "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on briefclio to show your best self and get discovered by recruiter.",
-    powerfulResume: "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on briefclio to show your best self and get discovered by..."
-  }
-  // Можно добавить дополнительные карточки card_2, card_3 и т.д.
+    title: "Professional Profile",
+    description:
+      "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on brefolio to show your best self and get discovered by recruiters.",
+  },
+  card_2: {
+    title: "Best Portfolio",
+    description:
+      "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on brefolio to show your best self and get discovered by recruiters.",
+  },
+  card_3: {
+    title: "Powerful Resume",
+    description:
+      "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on brefolio to show your best self and get discovered by recruiters.",
+  },
 };
 
-// Функция для создания HTML-разметки карточки
-function createCardHTML(cardData) {
+// Function to generate HTML template for a card
+function generateCardHTML(card) {
   return `
-    <div class="card">
-      <h2>${cardData.name}</h2>
-      <h3>${cardData.position}</h3>
-      <p class="location">${cardData.location}</p>
-      <hr>
-      
-      <section class="about">
-        <h4>About Me</h4>
-        <p>${cardData.about}</p>
-      </section>
-      
-      <section class="portfolio">
-        <h4>Portfolio</h4>
-        <ul>
-          ${cardData.portfolioItems.map(item => `
-            <li>
-              <strong>${item.title}</strong>
-              <span>${item.value}</span>
-            </li>
-          `).join('')}
-        </ul>
-      </section>
-      
-      <section class="experience">
-        <h4>Work Experience</h4>
-        <ul>
-          ${cardData.workExperience.map(exp => 
-            typeof exp === 'string' ? 
-              `<li>${exp}</li>` : 
-              `<li>
-                <strong>${exp.title}</strong>
-                <span>${exp.value}</span>
-              </li>`
-          ).join('')}
-        </ul>
-      </section>
-      
-      <section class="profile">
-        <h4>Professional Profile</h4>
-        <p>${cardData.profile}</p>
-      </section>
-      
-      <section class="best-portfolio">
-        <h4>Best Portfolio</h4>
-        <p>${cardData.bestPortfolio}</p>
-      </section>
-      
-      <section class="resume">
-        <h4>Powerful Resume</h4>
-        <p>${cardData.powerfulResume}</p>
-      </section>
+    <div class="card bg-white">
+      <h3 class="text-x">${card.title}</h3>
+      <p class="text-gray">${card.description}</p>
     </div>
   `;
 }
 
-// Функция для вставки карточек в DOM
-function renderCards(containerSelector = '.cards-container') {
-  const container = document.querySelector(containerSelector);
-  
-  if (!container) {
-    console.error(`Container with selector "${containerSelector}" not found`);
-    return;
-  }
-  
-  // Очищаем контейнер перед добавлением новых карточек
-  container.innerHTML = '';
-  
-  // Добавляем каждую карточку в контейнер
-  Object.values(cards).forEach(cardData => {
-    const cardHTML = createCardHTML(cardData);
-    container.insertAdjacentHTML('beforeend', cardHTML);
+// Function to render cards into the DOM
+function renderCards(cardsContainerId) {
+  const container = document.getElementById(cardsContainerId);
+
+  // Clear existing content
+  container.innerHTML = "";
+
+  // Set horizontal layout with Tailwind classes
+  container.classList.add("flex", "overflow-x-auto", "gap-4", "p-4");
+
+  // Loop through each card and insert it into the DOM
+  Object.values(cards).forEach((card) => {
+    const cardHTML = generateCardHTML(card);
+    container.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
 
-// Функция для получения карточек (заглушка для будущей реализации)
-function fetchCards() {
-  console.log('Функция для получения карточек с сервера будет реализована позже');
-  // Здесь будет код для получения данных с сервера
+// Placeholder function for future API/data fetching logic
+function fetchAndProcessCards() {
+  console.log("Fetching and processing card data...");
+  renderCards("cards-container");
 }
 
-// Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  renderCards();
-  fetchCards();
+// Optional: Enable mouse wheel scrolling
+function enableHorizontalScroll(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  container.addEventListener("wheel", (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+}
+
+// Initialize when page loads
+document.addEventListener("DOMContentLoaded", () => {
+  fetchAndProcessCards();
+  enableHorizontalScroll("cards-container");
 });

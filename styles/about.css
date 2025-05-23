@@ -1,4 +1,4 @@
-.section__about {
+/* .section__about {
     padding: 1px 80px;
     margin-top: 100px;
 }
@@ -143,4 +143,34 @@
     padding: 1px 12px;
     background-color: white;
     border: 1px solid #E5E8EB;
+} */
+ /* Скрыть стандартный скроллбар */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.flex{
+    display: flex;
+}
+/* Опционально: Стилизация карточек */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  min-width: 300px;
+  transition: transform 0.3s ease;
+  margin: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.text-x {
+    font-family: 'inter';
+    font-weight: 700;    
+}
+.text-gray {
+    font-family: 'inter';
+    font-weight: 400;
+    color: #707070;
 }
